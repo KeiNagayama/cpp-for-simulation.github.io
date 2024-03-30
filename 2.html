@@ -1,106 +1,961 @@
-<!DOCTYPE html><html><head>
-      <title>2</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="file:////Users/naga/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.13/crossnote/dependencies/katex/katex.min.css">
-      
-      
-      
-      
-      
-      <style>
-      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
-/* Please visit the URL below for more information: */
-/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+<!DOCTYPE html>
+<html>
 
-      </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
-    
-    
-      <div class="crossnote markdown-preview  ">
-      
-<h1 id="part-2-標準ライブラリ">Part 2: 標準ライブラリ </h1>
-<p>C++には標準ライブラリとして様々な機能が使えるようになっています．</p>
-<ul>
-<li>文字列：<code>string</code></li>
-<li>入出力：<code>iostream</code>, <code>fstream</code></li>
-<li>コンテナ：<code>vector</code>, <code>map</code>, <code>set</code>, <code>queue/stack</code>, <code>pair/tuple</code></li>
-<li>数値計算：<code>cmath</code>, <code>random</code></li>
-<li>アルゴリズム：<code>sort</code>, <code>unique</code>, <code>reverse</code></li>
-</ul>
-<h2 id="hello-world-再訪">Hello world! 再訪 </h2>
-<p>Part 1 のはじめに登場した Hello world! のプログラムをもう一度見てみましょう．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span> <span class="token comment">// 標準入出力ライブラリを取り込む（使えるようにする）</span></span>
+<head>
+    <title>2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="file:////Users/naga/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.13/crossnote/dependencies/katex/katex.min.css">
+
+
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+
+
+    <style>
+        code[class*=language-],
+        pre[class*=language-] {
+            color: #333;
+            background: 0 0;
+            font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.4;
+            -moz-tab-size: 8;
+            -o-tab-size: 8;
+            tab-size: 8;
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none
+        }
+
+        pre[class*=language-] {
+            padding: .8em;
+            overflow: auto;
+            border-radius: 3px;
+            background: #f5f5f5
+        }
+
+        :not(pre)>code[class*=language-] {
+            padding: .1em;
+            border-radius: .3em;
+            white-space: normal;
+            background: #f5f5f5
+        }
+
+        .token.blockquote,
+        .token.comment {
+            color: #969896
+        }
+
+        .token.cdata {
+            color: #183691
+        }
+
+        .token.doctype,
+        .token.macro.property,
+        .token.punctuation,
+        .token.variable {
+            color: #333
+        }
+
+        .token.builtin,
+        .token.important,
+        .token.keyword,
+        .token.operator,
+        .token.rule {
+            color: #a71d5d
+        }
+
+        .token.attr-value,
+        .token.regex,
+        .token.string,
+        .token.url {
+            color: #183691
+        }
+
+        .token.atrule,
+        .token.boolean,
+        .token.code,
+        .token.command,
+        .token.constant,
+        .token.entity,
+        .token.number,
+        .token.property,
+        .token.symbol {
+            color: #0086b3
+        }
+
+        .token.prolog,
+        .token.selector,
+        .token.tag {
+            color: #63a35c
+        }
+
+        .token.attr-name,
+        .token.class,
+        .token.class-name,
+        .token.function,
+        .token.id,
+        .token.namespace,
+        .token.pseudo-class,
+        .token.pseudo-element,
+        .token.url-reference .token.variable {
+            color: #795da3
+        }
+
+        .token.entity {
+            cursor: help
+        }
+
+        .token.title,
+        .token.title .token.punctuation {
+            font-weight: 700;
+            color: #1d3e81
+        }
+
+        .token.list {
+            color: #ed6a43
+        }
+
+        .token.inserted {
+            background-color: #eaffea;
+            color: #55a532
+        }
+
+        .token.deleted {
+            background-color: #ffecec;
+            color: #bd2c00
+        }
+
+        .token.bold {
+            font-weight: 700
+        }
+
+        .token.italic {
+            font-style: italic
+        }
+
+        .language-json .token.property {
+            color: #183691
+        }
+
+        .language-markup .token.tag .token.punctuation {
+            color: #333
+        }
+
+        .language-css .token.function,
+        code.language-css {
+            color: #0086b3
+        }
+
+        .language-yaml .token.atrule {
+            color: #63a35c
+        }
+
+        code.language-yaml {
+            color: #183691
+        }
+
+        .language-ruby .token.function {
+            color: #333
+        }
+
+        .language-markdown .token.url {
+            color: #795da3
+        }
+
+        .language-makefile .token.symbol {
+            color: #795da3
+        }
+
+        .language-makefile .token.variable {
+            color: #183691
+        }
+
+        .language-makefile .token.builtin {
+            color: #0086b3
+        }
+
+        .language-bash .token.keyword {
+            color: #0086b3
+        }
+
+        pre[data-line] {
+            position: relative;
+            padding: 1em 0 1em 3em
+        }
+
+        pre[data-line] .line-highlight-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            display: block;
+            width: 100%
+        }
+
+        pre[data-line] .line-highlight {
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding: inherit 0;
+            margin-top: 1em;
+            background: hsla(24, 20%, 50%, .08);
+            background: linear-gradient(to right, hsla(24, 20%, 50%, .1) 70%, hsla(24, 20%, 50%, 0));
+            pointer-events: none;
+            line-height: inherit;
+            white-space: pre
+        }
+
+        pre[data-line] .line-highlight:before,
+        pre[data-line] .line-highlight[data-end]:after {
+            content: attr(data-start);
+            position: absolute;
+            top: .4em;
+            left: .6em;
+            min-width: 1em;
+            padding: 0 .5em;
+            background-color: hsla(24, 20%, 50%, .4);
+            color: #f4f1ef;
+            font: bold 65%/1.5 sans-serif;
+            text-align: center;
+            vertical-align: .3em;
+            border-radius: 999px;
+            text-shadow: none;
+            box-shadow: 0 1px #fff
+        }
+
+        pre[data-line] .line-highlight[data-end]:after {
+            content: attr(data-end);
+            top: auto;
+            bottom: .4em
+        }
+
+        html body {
+            font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            overflow: initial;
+            box-sizing: border-box;
+            word-wrap: break-word
+        }
+
+        html body>:first-child {
+            margin-top: 0
+        }
+
+        html body h1,
+        html body h2,
+        html body h3,
+        html body h4,
+        html body h5,
+        html body h6 {
+            line-height: 1.2;
+            margin-top: 1em;
+            margin-bottom: 16px;
+            color: #000
+        }
+
+        html body h1 {
+            font-size: 2.25em;
+            font-weight: 300;
+            padding-bottom: .3em
+        }
+
+        html body h2 {
+            font-size: 1.75em;
+            font-weight: 400;
+            padding-bottom: .3em
+        }
+
+        html body h3 {
+            font-size: 1.5em;
+            font-weight: 500
+        }
+
+        html body h4 {
+            font-size: 1.25em;
+            font-weight: 600
+        }
+
+        html body h5 {
+            font-size: 1.1em;
+            font-weight: 600
+        }
+
+        html body h6 {
+            font-size: 1em;
+            font-weight: 600
+        }
+
+        html body h1,
+        html body h2,
+        html body h3,
+        html body h4,
+        html body h5 {
+            font-weight: 600
+        }
+
+        html body h5 {
+            font-size: 1em
+        }
+
+        html body h6 {
+            color: #5c5c5c
+        }
+
+        html body strong {
+            color: #000
+        }
+
+        html body del {
+            color: #5c5c5c
+        }
+
+        html body a:not([href]) {
+            color: inherit;
+            text-decoration: none
+        }
+
+        html body a {
+            color: #08c;
+            text-decoration: none
+        }
+
+        html body a:hover {
+            color: #00a3f5;
+            text-decoration: none
+        }
+
+        html body img {
+            max-width: 100%
+        }
+
+        html body>p {
+            margin-top: 0;
+            margin-bottom: 16px;
+            word-wrap: break-word
+        }
+
+        html body>ol,
+        html body>ul {
+            margin-bottom: 16px
+        }
+
+        html body ol,
+        html body ul {
+            padding-left: 2em
+        }
+
+        html body ol.no-list,
+        html body ul.no-list {
+            padding: 0;
+            list-style-type: none
+        }
+
+        html body ol ol,
+        html body ol ul,
+        html body ul ol,
+        html body ul ul {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        html body li {
+            margin-bottom: 0
+        }
+
+        html body li.task-list-item {
+            list-style: none
+        }
+
+        html body li>p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        html body .task-list-item-checkbox {
+            margin: 0 .2em .25em -1.8em;
+            vertical-align: middle
+        }
+
+        html body .task-list-item-checkbox:hover {
+            cursor: pointer
+        }
+
+        html body blockquote {
+            margin: 16px 0;
+            font-size: inherit;
+            padding: 0 15px;
+            color: #5c5c5c;
+            background-color: #f0f0f0;
+            border-left: 4px solid #d6d6d6
+        }
+
+        html body blockquote>:first-child {
+            margin-top: 0
+        }
+
+        html body blockquote>:last-child {
+            margin-bottom: 0
+        }
+
+        html body hr {
+            height: 4px;
+            margin: 32px 0;
+            background-color: #d6d6d6;
+            border: 0 none
+        }
+
+        html body table {
+            margin: 10px 0 15px 0;
+            border-collapse: collapse;
+            border-spacing: 0;
+            display: block;
+            width: 100%;
+            overflow: auto;
+            word-break: normal;
+            word-break: keep-all
+        }
+
+        html body table th {
+            font-weight: 700;
+            color: #000
+        }
+
+        html body table td,
+        html body table th {
+            border: 1px solid #d6d6d6;
+            padding: 6px 13px
+        }
+
+        html body dl {
+            padding: 0
+        }
+
+        html body dl dt {
+            padding: 0;
+            margin-top: 16px;
+            font-size: 1em;
+            font-style: italic;
+            font-weight: 700
+        }
+
+        html body dl dd {
+            padding: 0 16px;
+            margin-bottom: 16px
+        }
+
+        html body code {
+            font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+            font-size: .85em;
+            color: #000;
+            background-color: #f0f0f0;
+            border-radius: 3px;
+            padding: .2em 0
+        }
+
+        html body code::after,
+        html body code::before {
+            letter-spacing: -.2em;
+            content: '\00a0'
+        }
+
+        html body pre>code {
+            padding: 0;
+            margin: 0;
+            word-break: normal;
+            white-space: pre;
+            background: 0 0;
+            border: 0
+        }
+
+        html body .highlight {
+            margin-bottom: 16px
+        }
+
+        html body .highlight pre,
+        html body pre {
+            padding: 1em;
+            overflow: auto;
+            line-height: 1.45;
+            border: #d6d6d6;
+            border-radius: 3px
+        }
+
+        html body .highlight pre {
+            margin-bottom: 0;
+            word-break: normal
+        }
+
+        html body pre code,
+        html body pre tt {
+            display: inline;
+            max-width: initial;
+            padding: 0;
+            margin: 0;
+            overflow: initial;
+            line-height: inherit;
+            word-wrap: normal;
+            background-color: transparent;
+            border: 0
+        }
+
+        html body pre code:after,
+        html body pre code:before,
+        html body pre tt:after,
+        html body pre tt:before {
+            content: normal
+        }
+
+        html body blockquote,
+        html body dl,
+        html body ol,
+        html body p,
+        html body pre,
+        html body ul {
+            margin-top: 0;
+            margin-bottom: 16px
+        }
+
+        html body kbd {
+            color: #000;
+            border: 1px solid #d6d6d6;
+            border-bottom: 2px solid #c7c7c7;
+            padding: 2px 4px;
+            background-color: #f0f0f0;
+            border-radius: 3px
+        }
+
+        @media print {
+            html body {
+                background-color: #fff
+            }
+
+            html body h1,
+            html body h2,
+            html body h3,
+            html body h4,
+            html body h5,
+            html body h6 {
+                color: #000;
+                page-break-after: avoid
+            }
+
+            html body blockquote {
+                color: #5c5c5c
+            }
+
+            html body pre {
+                page-break-inside: avoid
+            }
+
+            html body table {
+                display: table
+            }
+
+            html body img {
+                display: block;
+                max-width: 100%;
+                max-height: 100%
+            }
+
+            html body code,
+            html body pre {
+                word-wrap: break-word;
+                white-space: pre
+            }
+        }
+
+        .markdown-preview {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box
+        }
+
+        .markdown-preview ul {
+            list-style: disc
+        }
+
+        .markdown-preview ul ul {
+            list-style: circle
+        }
+
+        .markdown-preview ul ul ul {
+            list-style: square
+        }
+
+        .markdown-preview ol {
+            list-style: decimal
+        }
+
+        .markdown-preview ol ol,
+        .markdown-preview ul ol {
+            list-style-type: lower-roman
+        }
+
+        .markdown-preview ol ol ol,
+        .markdown-preview ol ul ol,
+        .markdown-preview ul ol ol,
+        .markdown-preview ul ul ol {
+            list-style-type: lower-alpha
+        }
+
+        .markdown-preview .newpage,
+        .markdown-preview .pagebreak {
+            page-break-before: always
+        }
+
+        .markdown-preview pre.line-numbers {
+            position: relative;
+            padding-left: 3.8em;
+            counter-reset: linenumber
+        }
+
+        .markdown-preview pre.line-numbers>code {
+            position: relative
+        }
+
+        .markdown-preview pre.line-numbers .line-numbers-rows {
+            position: absolute;
+            pointer-events: none;
+            top: 1em;
+            font-size: 100%;
+            left: 0;
+            width: 3em;
+            letter-spacing: -1px;
+            border-right: 1px solid #999;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        .markdown-preview pre.line-numbers .line-numbers-rows>span {
+            pointer-events: none;
+            display: block;
+            counter-increment: linenumber
+        }
+
+        .markdown-preview pre.line-numbers .line-numbers-rows>span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: .8em;
+            text-align: right
+        }
+
+        .markdown-preview .mathjax-exps .MathJax_Display {
+            text-align: center !important
+        }
+
+        .markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group {
+            display: none
+        }
+
+        .markdown-preview:not([data-for=preview]) .code-chunk .status {
+            display: none
+        }
+
+        .markdown-preview:not([data-for=preview]) .code-chunk .output-div {
+            margin-bottom: 16px
+        }
+
+        .markdown-preview .md-toc {
+            padding: 0
+        }
+
+        .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link {
+            display: inline;
+            padding: .25rem 0
+        }
+
+        .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,
+        .markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p {
+            display: inline
+        }
+
+        .markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+            font-weight: 800
+        }
+
+        .scrollbar-style::-webkit-scrollbar {
+            width: 8px
+        }
+
+        .scrollbar-style::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: transparent
+        }
+
+        .scrollbar-style::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: rgba(150, 150, 150, .66);
+            border: 4px solid rgba(150, 150, 150, .66);
+            background-clip: content-box
+        }
+
+        html body[for=html-export]:not([data-presentation-mode]) {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            overflow: auto
+        }
+
+        html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+            position: relative;
+            top: 0;
+            min-height: 100vh
+        }
+
+        @media screen and (min-width:914px) {
+            html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                padding: 2em calc(50% - 457px + 2em)
+            }
+        }
+
+        @media screen and (max-width:914px) {
+            html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                padding: 2em
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            html body[for=html-export]:not([data-presentation-mode]) .markdown-preview {
+                font-size: 14px !important;
+                padding: 1em
+            }
+        }
+
+        @media print {
+            html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+                display: none
+            }
+        }
+
+        html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn {
+            position: fixed;
+            bottom: 8px;
+            left: 8px;
+            font-size: 28px;
+            cursor: pointer;
+            color: inherit;
+            z-index: 99;
+            width: 32px;
+            text-align: center;
+            opacity: .4
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn {
+            opacity: 1
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100%;
+            padding: 32px 0 48px 0;
+            font-size: 14px;
+            box-shadow: 0 0 4px rgba(150, 150, 150, .33);
+            box-sizing: border-box;
+            overflow: auto;
+            background-color: inherit
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar {
+            width: 8px
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: transparent
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: rgba(150, 150, 150, .66);
+            border: 4px solid rgba(150, 150, 150, .66);
+            background-clip: content-box
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a {
+            text-decoration: none
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc {
+            padding: 0 16px
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link {
+            display: inline;
+            padding: .25rem 0
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p {
+            display: inline
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link {
+            font-weight: 800
+        }
+
+        html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+            left: 300px;
+            width: calc(100% - 300px);
+            padding: 2em calc(50% - 457px - 300px / 2);
+            margin: 0;
+            box-sizing: border-box
+        }
+
+        @media screen and (max-width:1274px) {
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+                padding: 2em
+            }
+        }
+
+        @media screen and (max-width:450px) {
+            html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview {
+                width: 100%
+            }
+        }
+
+        html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+            left: 50%;
+            transform: translateX(-50%)
+        }
+
+        html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc {
+            display: none
+        }
+
+        /* Please visit the URL below for more information: */
+        /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+    </style>
+    <!-- The content below will be included at the end of the <head> element. -->
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            // your code here
+        });
+    </script>
+</head>
+
+<body for="html-export">
+
+
+    <div class="crossnote markdown-preview  ">
+
+        <h1 id="part-2-標準ライブラリ">Part 2: 標準ライブラリ </h1>
+        <p>C++には標準ライブラリとして様々な機能が使えるようになっています．</p>
+        <ul>
+            <li>文字列：<code>string</code></li>
+            <li>入出力：<code>iostream</code>, <code>fstream</code></li>
+            <li>コンテナ：<code>vector</code>, <code>map</code>, <code>set</code>, <code>queue/stack</code>,
+                <code>pair/tuple</code>
+            </li>
+            <li>数値計算：<code>cmath</code>, <code>random</code></li>
+            <li>アルゴリズム：<code>sort</code>, <code>unique</code>, <code>reverse</code></li>
+        </ul>
+        <h2 id="hello-world-再訪">Hello world! 再訪 </h2>
+        <p>Part 1 のはじめに登場した Hello world! のプログラムをもう一度見てみましょう．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span> <span class="token comment">// 標準入出力ライブラリを取り込む（使えるようにする）</span></span>
 
 <span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Hello world!"</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><p>C++の標準ライブラリの機能は <code>std</code> という箱の中に入っています．この箱の名前が名前空間 (namespace) で，<code>std</code> は標準ライブラリの名前空間です．<code>std::</code> をつけることで標準ライブラリの中の機能を使うことを明示します．</p>
-<p>C++ の標準ライブラリは，名前空間 <code>std</code> のなかで，機能ごとに分かれて定義されています．<code>include &lt;ライブラリ名&gt;</code> とすることでそのライブラリの機能を使えるようになります．<code>iostream</code> は標準入出力に関する機能がまとめられたライブラリであり，標準出力を意味する <code>std::cout</code>，改行を意味する <code>std::endl</code> などが定義されています．標準出力にメッセージを送る <code>&lt;&lt;</code> 演算子もここに定義されています．</p>
-<p>標準ライブラリに含まれる機能を使うたびに <code>std::</code> を付けるのは面倒に感じるかもしれません．その場合，すべてのライブラリを <code>include</code> した後に <code>using namespace std;</code> と書くと，<code>std::</code> を省略して標準ライブラリの関数やクラスを直接使うことができます．例えば，Hello world! のプログラムを次のように書くことができます．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+</code></pre>
+        <p>C++の標準ライブラリの機能は <code>std</code> という箱の中に入っています．この箱の名前が名前空間 (namespace) で，<code>std</code>
+            は標準ライブラリの名前空間です．<code>std::</code> をつけることで標準ライブラリの中の機能を使うことを明示します．</p>
+        <p>C++ の標準ライブラリは，名前空間 <code>std</code> のなかで，機能ごとに分かれて定義されています．<code>include &lt;ライブラリ名&gt;</code>
+            とすることでそのライブラリの機能を使えるようになります．<code>iostream</code> は標準入出力に関する機能がまとめられたライブラリであり，標準出力を意味する
+            <code>std::cout</code>，改行を意味する <code>std::endl</code> などが定義されています．標準出力にメッセージを送る <code>&lt;&lt;</code>
+            演算子もここに定義されています．
+        </p>
+        <p>標準ライブラリに含まれる機能を使うたびに <code>std::</code> を付けるのは面倒に感じるかもしれません．その場合，すべてのライブラリを <code>include</code> した後に
+            <code>using namespace std;</code> と書くと，<code>std::</code> を省略して標準ライブラリの関数やクラスを直接使うことができます．例えば，Hello world!
+            のプログラムを次のように書くことができます．
+        </p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
 <span class="token keyword keyword-using">using</span> <span class="token keyword keyword-namespace">namespace</span> std<span class="token punctuation">;</span>
 
 <span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Hello world!"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><p><code>using namespace std;</code> 使用にはいくつか注意点があります．</p>
-<ol>
-<li>名前の衝突: <code>using namespace std;</code> を使用すると，<code>std</code> 名前空間にあるすべての名前が現在のスコープに取り込まれます．これにより，他のライブラリやユーザー定義の名前と衝突する可能性があります．</li>
-<li>可読性の低下: <code>std::</code> を省略することでコードが短くなりますが，どの名前が標準ライブラリから来ているのかが不明確になるため，コードの可読性が低下することがあります．</li>
-<li>大規模なプロジェクト: 大規模なプロジェクトやライブラリでは，<code>using namespace std;</code> の使用を避けることが一般的です．これは，名前の衝突を避けるためと，コードの明確性を保つためです．</li>
-</ol>
-<p><code>using namespace std;</code> の使用は，小さなプログラムや学習目的のコードでは便利ですが，大規模なプロジェクトやライブラリでは慎重に検討する必要があります．必要な場合は，特定のクラスや関数に対して <code>using</code> 宣言を使うことで，名前空間を明示的に指定することができます．例えば，<code>using std::cout;</code> のように使用します．</p>
-<h2 id="文字列">文字列 </h2>
-<p>文字列に関する機能は <code>string</code> ライブラリにまとめられています．</p>
-<table>
-<thead>
-<tr>
-<th>処理</th>
-<th>コード</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>宣言</td>
-<td><code>std::string str;</code></td>
-</tr>
-<tr>
-<td>2つの文字列を連結する</td>
-<td><code>str1 + str2</code></td>
-</tr>
-<tr>
-<td>部分文字列を取り出す</td>
-<td><code>str.substring(start, length)</code></td>
-</tr>
-<tr>
-<td>文字列→<code>int</code> の変換</td>
-<td><code>std::stoi(str)</code></td>
-</tr>
-<tr>
-<td>文字列→<code>double</code> の変換</td>
-<td><code>std::stod(str)</code></td>
-</tr>
-<tr>
-<td>数値→文字列の変換</td>
-<td><code>std::to_string(*)</code></td>
-</tr>
-<tr>
-<td>行の読み込み</td>
-<td><code>std::getline(stream, buffer, delim='\n')</code></td>
-</tr>
-</tbody>
-</table>
-<p>基本的な使い方は次のとおりです．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+</code></pre>
+        <p><code>using namespace std;</code> 使用にはいくつか注意点があります．</p>
+        <ol>
+            <li>名前の衝突: <code>using namespace std;</code> を使用すると，<code>std</code>
+                名前空間にあるすべての名前が現在のスコープに取り込まれます．これにより，他のライブラリやユーザー定義の名前と衝突する可能性があります．</li>
+            <li>可読性の低下: <code>std::</code> を省略することでコードが短くなりますが，どの名前が標準ライブラリから来ているのかが不明確になるため，コードの可読性が低下することがあります．</li>
+            <li>大規模なプロジェクト: 大規模なプロジェクトやライブラリでは，<code>using namespace std;</code>
+                の使用を避けることが一般的です．これは，名前の衝突を避けるためと，コードの明確性を保つためです．</li>
+        </ol>
+        <p><code>using namespace std;</code>
+            の使用は，小さなプログラムや学習目的のコードでは便利ですが，大規模なプロジェクトやライブラリでは慎重に検討する必要があります．必要な場合は，特定のクラスや関数に対して <code>using</code>
+            宣言を使うことで，名前空間を明示的に指定することができます．例えば，<code>using std::cout;</code> のように使用します．</p>
+        <h2 id="文字列">文字列 </h2>
+        <p>文字列に関する機能は <code>string</code> ライブラリにまとめられています．</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>処理</th>
+                    <th>コード</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>宣言</td>
+                    <td><code>std::string str;</code></td>
+                </tr>
+                <tr>
+                    <td>2つの文字列を連結する</td>
+                    <td><code>str1 + str2</code></td>
+                </tr>
+                <tr>
+                    <td>部分文字列を取り出す</td>
+                    <td><code>str.substring(start, length)</code></td>
+                </tr>
+                <tr>
+                    <td>文字列→<code>int</code> の変換</td>
+                    <td><code>std::stoi(str)</code></td>
+                </tr>
+                <tr>
+                    <td>文字列→<code>double</code> の変換</td>
+                    <td><code>std::stod(str)</code></td>
+                </tr>
+                <tr>
+                    <td>数値→文字列の変換</td>
+                    <td><code>std::to_string(*)</code></td>
+                </tr>
+                <tr>
+                    <td>行の読み込み</td>
+                    <td><code>std::getline(stream, buffer, delim='\n')</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>基本的な使い方は次のとおりです．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
 
 <span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -119,11 +974,19 @@
 
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><p><code>std::stoi</code>と<code>std::stod</code>は数値の入力を受け取るときに重宝します．<code>std::to_string</code> は出力ファイル名に数字を混ぜる場合などで使います．</p>
-<p><code>std::getline</code> は <code>csv</code> 等のファイルを読み込む際に活躍します．<code>csv</code> 等のファイルを読み込む方法は，ファイル入力とデータ構造を導入した後に解説します．ここでは，<code>std::getline</code> の基本的な使い方を見ていきます．</p>
-<p><code>std::getline(stream, line, delim='\n')</code> は，入力ストリーム stream から，改行文字が出るかそのストリームの終わりまで文字列を読み出し，その結果を文字列型の変数 line に格納します．ストリームとはデータの流れを表す抽象的なデータ構造で，ターミナルへの入出力（標準入出力）やファイルへの入出力，メモリへの入出力などを同じように扱えるようにする役割があります．ストリームの概念を理解することは難しいですが，理解しないと先に進めないというわけでもありません．このため，今の段階では「C++ にはストリームという便利なデータ構造があり，std::getlineは入力用のストリームから文字列を読み出す」ということを受け入れてください．</p>
-<p>3つ目の引数 delim は char 型の変数で，区切り文字 (delimiter) を指定します．デフォルト値は改行文字になっていますが，カンマやスペース等に設定することもできます．<code>std::getline</code> を使ったファイルの読み込みは次節に任せ，ここではカンマで区切られた要素を取り出す方法を示します．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+</code></pre>
+        <p><code>std::stoi</code>と<code>std::stod</code>は数値の入力を受け取るときに重宝します．<code>std::to_string</code>
+            は出力ファイル名に数字を混ぜる場合などで使います．</p>
+        <p><code>std::getline</code> は <code>csv</code> 等のファイルを読み込む際に活躍します．<code>csv</code>
+            等のファイルを読み込む方法は，ファイル入力とデータ構造を導入した後に解説します．ここでは，<code>std::getline</code> の基本的な使い方を見ていきます．</p>
+        <p><code>std::getline(stream, line, delim='\n')</code> は，入力ストリーム stream
+            から，改行文字が出るかそのストリームの終わりまで文字列を読み出し，その結果を文字列型の変数 line
+            に格納します．ストリームとはデータの流れを表す抽象的なデータ構造で，ターミナルへの入出力（標準入出力）やファイルへの入出力，メモリへの入出力などを同じように扱えるようにする役割があります．ストリームの概念を理解することは難しいですが，理解しないと先に進めないというわけでもありません．このため，今の段階では「C++
+            にはストリームという便利なデータ構造があり，std::getlineは入力用のストリームから文字列を読み出す」ということを受け入れてください．</p>
+        <p>3つ目の引数 delim は char 型の変数で，区切り文字 (delimiter)
+            を指定します．デフォルト値は改行文字になっていますが，カンマやスペース等に設定することもできます．<code>std::getline</code>
+            を使ったファイルの読み込みは次節に任せ，ここではカンマで区切られた要素を取り出す方法を示します．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sstream&gt;</span> <span class="token comment">// std::stringstream</span></span>
 
@@ -146,28 +1009,38 @@
 <span class="token comment">// 456</span>
 <span class="token comment">// 789</span>
 <span class="token comment">// sum = 1368</span>
-</code></pre><ul>
-<li>sstream は文字列ストリームのライブラリ</li>
-<li>処理したい文字列は，文字列ストリームというデータ構造に変換してから std::getline に読み込ませる</li>
-<li>std::getline は文字列を読み出せる場合は true，文字列が終わっている場合は false を返す</li>
-<li>std::stoi, std::to_string の使い方も確認してください</li>
-</ul>
-<p>Q. <code>std::stoi</code> は <code>"01"</code> のような 0 埋めされた文字列の整数変換に対応しているでしょうか？例えば，文字列 "2024/04/01" から年月日を下記のように取り出すことはできますか？</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code>std<span class="token double-colon punctuation">::</span>string ymd_str <span class="token operator">=</span> <span class="token string">"2024/04/01"</span><span class="token punctuation">;</span>
+</code></pre>
+        <ul>
+            <li>sstream は文字列ストリームのライブラリ</li>
+            <li>処理したい文字列は，文字列ストリームというデータ構造に変換してから std::getline に読み込ませる</li>
+            <li>std::getline は文字列を読み出せる場合は true，文字列が終わっている場合は false を返す</li>
+            <li>std::stoi, std::to_string の使い方も確認してください</li>
+        </ul>
+        <p>Q. <code>std::stoi</code> は <code>"01"</code> のような 0 埋めされた文字列の整数変換に対応しているでしょうか？例えば，文字列 "2024/04/01"
+            から年月日を下記のように取り出すことはできますか？</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code>std<span class="token double-colon punctuation">::</span>string ymd_str <span class="token operator">=</span> <span class="token string">"2024/04/01"</span><span class="token punctuation">;</span>
 <span class="token keyword keyword-int">int</span> y <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">stoi</span><span class="token punctuation">(</span>ymd_str<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "2024" -&gt; 2024 will work</span>
 <span class="token keyword keyword-int">int</span> m <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">stoi</span><span class="token punctuation">(</span>ymd_str<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "04" -&gt; 4 ??</span>
 <span class="token keyword keyword-int">int</span> d <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">stoi</span><span class="token punctuation">(</span>ymd_str<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "01" -&gt; 1 ??</span>
-</code></pre><h2 id="ファイル入出力">ファイル入出力 </h2>
-<p>ファイル入出力に関する機能は <code>fstream</code> ライブラリにまとめられています．ファイル入力には <code>std::ifsteam</code>，ファイル出力には <code>std::ofsteam</code> を使います．宣言の仕方はどちらも同じで，ファイルのパスを渡して初期化します．その後，<code>std::ifsteam</code> は <code>std::getline</code> に流してファイルの中身を取り出します．<code>std::ofsteam</code> は <code>std::cout</code> で標準出力するのと同じようにファイル出力することができます．</p>
-<p>具体例として，USD/JPY 過去データ (2024/03/18 ~ 2024/03/25) の終値が記載された下記のファイル <code>input.txt</code> を読み込み，平均値を <code>output.txt</code> に出力するプログラムを示します．</p>
-<pre data-role="codeBlock" data-info="txt" class="language-txt txt"><code>149.14
+</code></pre>
+        <h2 id="ファイル入出力">ファイル入出力 </h2>
+        <p>ファイル入出力に関する機能は <code>fstream</code> ライブラリにまとめられています．ファイル入力には <code>std::ifsteam</code>，ファイル出力には
+            <code>std::ofsteam</code> を使います．宣言の仕方はどちらも同じで，ファイルのパスを渡して初期化します．その後，<code>std::ifsteam</code> は
+            <code>std::getline</code> に流してファイルの中身を取り出します．<code>std::ofsteam</code> は <code>std::cout</code>
+            で標準出力するのと同じようにファイル出力することができます．
+        </p>
+        <p>具体例として，USD/JPY 過去データ (2024/03/18 ~ 2024/03/25) の終値が記載された下記のファイル <code>input.txt</code> を読み込み，平均値を
+            <code>output.txt</code> に出力するプログラムを示します．
+        </p>
+        <pre data-role="codeBlock" data-info="txt" class="language-txt txt"><code>149.14
 150.85
 151.25
 151.32
 151.37
 151.42
 151.61
-</code></pre><pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
+</code></pre>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fstream&gt;</span></span>
 
@@ -191,24 +1064,27 @@
     ofs <span class="token operator">&lt;&lt;</span> <span class="token string">"average = "</span> <span class="token operator">&lt;&lt;</span> sum <span class="token operator">/</span> cnt <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h2 id="課題-2-1">課題 2-1 </h2>
-<p>hogehoge</p>
-<h2 id="コンテナ必修">コンテナ（必修） </h2>
-<p>C++には標準ライブラリに多くのデータ構造が実装されています．代表的なものを挙げれば，可変長配列 vector や連想配列 map，集合 set などがあります．Pythonユーザの方は，リストと辞書の代わりにvectorとmapを使うことができます．より正確には，Pythonの辞書はキーがソートされていませんが，c++のmapはキーがソートされています．キーがソートされていない連想配列は unordered_map という名前で用意されています．</p>
-<p>探索アルゴリズムの実装に欠かせない queue, stack なども使えます．</p>
-<p>異なる型を組として保持できる pair, tuple などのデータ構造も定義されています．</p>
-<h3 id="vector">vector </h3>
-<p>std::vector は最も使用頻度の高いコンテナで，同じ型のデータを保持できる可変長配列です．基本的な機能を記します．</p>
-<ul>
-<li>宣言: <code>std::vector&lt;型&gt; v;</code></li>
-<li>宣言（初期化あり）: <code>std::vector&lt;int&gt; v = {1,2,3};</code></li>
-<li>宣言（要素で埋める）: <code>std::vector&lt;int&gt; v(5, 0); // {0,0,0,0,0}</code></li>
-<li>末尾への要素の追加: <code>v.push_back(element)</code></li>
-<li>i番目の要素へのアクセス: <code>v[i]</code></li>
-<li>要素数の取得: <code>v.size()</code></li>
-<li>空であるかの判定: <code>v.empty()</code></li>
-</ul>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
+</code></pre>
+        <h2 id="課題-2-1">課題 2-1 </h2>
+        <p>hogehoge</p>
+        <h2 id="コンテナ必修">コンテナ（必修） </h2>
+        <p>C++には標準ライブラリに多くのデータ構造が実装されています．代表的なものを挙げれば，可変長配列 vector や連想配列 map，集合 set
+            などがあります．Pythonユーザの方は，リストと辞書の代わりにvectorとmapを使うことができます．より正確には，Pythonの辞書はキーがソートされていませんが，c++のmapはキーがソートされています．キーがソートされていない連想配列は
+            unordered_map という名前で用意されています．</p>
+        <p>探索アルゴリズムの実装に欠かせない queue, stack なども使えます．</p>
+        <p>異なる型を組として保持できる pair, tuple などのデータ構造も定義されています．</p>
+        <h3 id="vector">vector </h3>
+        <p>std::vector は最も使用頻度の高いコンテナで，同じ型のデータを保持できる可変長配列です．基本的な機能を記します．</p>
+        <ul>
+            <li>宣言: <code>std::vector&lt;型&gt; v;</code></li>
+            <li>宣言（初期化あり）: <code>std::vector&lt;int&gt; v = {1,2,3};</code></li>
+            <li>宣言（要素で埋める）: <code>std::vector&lt;int&gt; v(5, 0); // {0,0,0,0,0}</code></li>
+            <li>末尾への要素の追加: <code>v.push_back(element)</code></li>
+            <li>i番目の要素へのアクセス: <code>v[i]</code></li>
+            <li>要素数の取得: <code>v.size()</code></li>
+            <li>空であるかの判定: <code>v.empty()</code></li>
+        </ul>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
 
 <span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
@@ -220,9 +1096,12 @@
     std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> v<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span> <span class="token comment">// 4</span>
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><p>Q. vectorで存在しないインデックスを指定するとどうなりますか？</p>
-<p><code>std::vector</code> の要素を順番に取り出す方法として，Pythonの  <code>for i in range(len(v))</code> と <code>for x in v</code> に対応する2つが用意されています．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token comment">// 通常の for 文による要素アクセス</span>
+</code></pre>
+        <p>Q. vectorで存在しないインデックスを指定するとどうなりますか？</p>
+        <p><code>std::vector</code> の要素を順番に取り出す方法として，Pythonの <code>for i in range(len(v))</code> と
+            <code>for x in v</code> に対応する2つが用意されています．
+        </p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token comment">// 通常の for 文による要素アクセス</span>
 <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> v<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> v<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
@@ -232,8 +1111,10 @@
 <span class="token punctuation">{</span>
     std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> x <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><p>要素を更新したい場合，範囲 for 文は <code>for (int x : v)</code> の代わりに <code>for (int &amp;x : v)</code> とする必要があります．前者ではコピーが取られ，後者では参照が渡されます．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token comment">// 通常の for 文による要素アクセス</span>
+</code></pre>
+        <p>要素を更新したい場合，範囲 for 文は <code>for (int x : v)</code> の代わりに <code>for (int &amp;x : v)</code>
+            とする必要があります．前者ではコピーが取られ，後者では参照が渡されます．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token comment">// 通常の for 文による要素アクセス</span>
 <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> v<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     v<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*=</span> <span class="token number">2</span><span class="token punctuation">;</span>
@@ -243,9 +1124,12 @@
 <span class="token punctuation">{</span>
     x <span class="token operator">*=</span> <span class="token number">2</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h4 id="csv-ファイルの読み込み">CSV ファイルの読み込み </h4>
-<p><code>std::vector&lt;型&gt;</code> の型には <code>std::vector&lt;string&gt;</code> のような1次元配列を指定できます．つまり，<code>std::vector&lt;std::vector&lt;string&gt;&gt;</code>　のような2次元配列を定義できます．CSVファイルを読み込み，この2次元配列に格納する関数は下記のようになります．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fstream&gt;</span>  <span class="token comment">// ファイル入出力</span></span>
+</code></pre>
+        <h4 id="csv-ファイルの読み込み">CSV ファイルの読み込み </h4>
+        <p><code>std::vector&lt;型&gt;</code> の型には <code>std::vector&lt;string&gt;</code>
+            のような1次元配列を指定できます．つまり，<code>std::vector&lt;std::vector&lt;string&gt;&gt;</code>　のような2次元配列を定義できます．CSVファイルを読み込み，この2次元配列に格納する関数は下記のようになります．
+        </p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fstream&gt;</span>  <span class="token comment">// ファイル入出力</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sstream&gt;</span>  <span class="token comment">// 文字列の分解に使う</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
@@ -272,17 +1156,19 @@ std<span class="token double-colon punctuation">::</span>vector<span class="toke
         data<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token function">split</span><span class="token punctuation">(</span>line<span class="token punctuation">,</span> <span class="token char">','</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword keyword-return">return</span> data<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h3 id="mapunordered_map">map/unordered_map </h3>
-<p>C++には連想配列として，キーがソートされている <code>std::map</code> とキーがソートされていない <code>std::unordered_map</code> の2つが用意されています．基本的な使い方は下記のとおりです．<code>map/unordered_map</code> 共通です．</p>
-<ul>
-<li>宣言: <code>std::map&lt;keyの型, valueの型&gt; mp;</code></li>
-<li>宣言（初期化あり）: <code>std::vector&lt;std::string, int&gt; mp = { {"Jan", 1}, {"Feb", 2}};</code></li>
-<li>keyに対応する値へのアクセス: <code>mp[key]</code></li>
-<li>keyに対応する値の追加: <code>mp[key] = value</code></li>
-<li>要素数の取得: <code>mp.size()</code></li>
-<li>空であるかの判定: <code>mp.empty()</code></li>
-</ul>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+</code></pre>
+        <h3 id="mapunordered_map">map/unordered_map </h3>
+        <p>C++には連想配列として，キーがソートされている <code>std::map</code> とキーがソートされていない <code>std::unordered_map</code>
+            の2つが用意されています．基本的な使い方は下記のとおりです．<code>map/unordered_map</code> 共通です．</p>
+        <ul>
+            <li>宣言: <code>std::map&lt;keyの型, valueの型&gt; mp;</code></li>
+            <li>宣言（初期化あり）: <code>std::vector&lt;std::string, int&gt; mp = { {"Jan", 1}, {"Feb", 2}};</code></li>
+            <li>keyに対応する値へのアクセス: <code>mp[key]</code></li>
+            <li>keyに対応する値の追加: <code>mp[key] = value</code></li>
+            <li>要素数の取得: <code>mp.size()</code></li>
+            <li>空であるかの判定: <code>mp.empty()</code></li>
+        </ul>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;map&gt;</span></span>
 
 <span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -298,19 +1184,26 @@ std<span class="token double-colon punctuation">::</span>vector<span class="toke
 
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><p><code>std::map</code> の要素へアクセスする方法として，イテレータを使う方法と，範囲 for 文を使う方法（c++17以降）の2つがあります．前者は本稿では解説しないので，下記等を参照ください．</p>
-<ul>
-<li><a href="https://rinatz.github.io/cpp-book/ch03-08-iterators/#_3">ゼロから学ぶ C++｜マップのイテレータ</a></li>
-<li><a href="https://www.delftstack.com/ja/howto/cpp/how-to-iterate-over-map-in-cpp">DelftStack｜C++ でマップを繰り返し処理する方法</a></li>
-</ul>
-<p>C++17以降では，Python の <code>for k, v in d.items()</code> と同じように範囲 for 文を書くことができます．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-auto">auto</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span>value<span class="token punctuation">]</span> <span class="token operator">:</span> mp<span class="token punctuation">)</span>
+</code></pre>
+        <p><code>std::map</code> の要素へアクセスする方法として，イテレータを使う方法と，範囲 for 文を使う方法（c++17以降）の2つがあります．前者は本稿では解説しないので，下記等を参照ください．
+        </p>
+        <ul>
+            <li><a href="https://rinatz.github.io/cpp-book/ch03-08-iterators/#_3">ゼロから学ぶ C++｜マップのイテレータ</a></li>
+            <li><a href="https://www.delftstack.com/ja/howto/cpp/how-to-iterate-over-map-in-cpp">DelftStack｜C++
+                    でマップを繰り返し処理する方法</a></li>
+        </ul>
+        <p>C++17以降では，Python の <code>for k, v in d.items()</code> と同じように範囲 for 文を書くことができます．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-auto">auto</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span>value<span class="token punctuation">]</span> <span class="token operator">:</span> mp<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> key <span class="token operator">&lt;&lt;</span> <span class="token string">": "</span> <span class="token operator">&lt;&lt;</span> value <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><p><code>auto</code> は型推論を行うキーワードで，C++11 で導入されました．<code>auto</code> を使用すると変数の型をコンパイラに自動的に推論させることができます．上の例では <code>std::pair&lt;const KeyType, ValueType&gt;</code> 型が自動的に推論されます．<code>std::pair</code> と <code>const</code> の説明は省きます．</p>
-<p><code>std::map</code> を使うと配列の各要素の出現頻度を求められます．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword keyword-int">int</span><span class="token operator">&gt;</span> v <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+        <p><code>auto</code> は型推論を行うキーワードで，C++11 で導入されました．<code>auto</code> を使用すると変数の型をコンパイラに自動的に推論させることができます．上の例では
+            <code>std::pair&lt;const KeyType, ValueType&gt;</code> 型が自動的に推論されます．<code>std::pair</code> と
+            <code>const</code> の説明は省きます．
+        </p>
+        <p><code>std::map</code> を使うと配列の各要素の出現頻度を求められます．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span><span class="token keyword keyword-int">int</span><span class="token operator">&gt;</span> v <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token comment">// 各要素の出現数をカウント</span>
 std<span class="token double-colon punctuation">::</span>map<span class="token operator">&lt;</span><span class="token keyword keyword-int">int</span><span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span><span class="token operator">&gt;</span> cnt<span class="token punctuation">;</span>
@@ -324,90 +1217,111 @@ std<span class="token double-colon punctuation">::</span>map<span class="token o
 <span class="token comment">// 1: 1</span>
 <span class="token comment">// 2: 2</span>
 <span class="token comment">// 4: 2</span>
-</code></pre><p>Python の 辞書型 <code>dict</code> では，存在しないキーに対して <code>d[x] += 1</code> とすることはできません（<code>KeyError</code> が出る）．一方，C++ や AWK の連想配列では，値の初期値が自動的に value 型の初期値となります．例えば，value 型が int であれば，宣言後にすべてのキーに対して 0 で初期化せずとも，キーが最初に使われるタイミングで 0 に初期化されます．</p>
-<p>ヒストグラム法も同じように実装できます．ただし，整数丸めの関数は後述する <code>cmath</code> ライブラリに含まれています．</p>
-<h2 id="課題-2-2統計量の計算">課題 2-2：統計量の計算 </h2>
-<p>金沢の2017年から2019年の気温データ kanazawa2017-2019.csv を用いて，以下を求めてください．</p>
-<ol>
-<li>年ごとの，気温の最小値/最大値/平均値/標準偏差</li>
-<li>月ごとの，気温の最小値/最大値/平均値/標準偏差</li>
-<li>日ごとの，気温の最小値/最大値/平均値/標準偏差</li>
-</ol>
-<p>コメント</p>
-<ul>
-<li>2019/12/25 10:00 のデータが欠損していますが，無視してよい</li>
-<li>ファイルは C++ で扱いやすいよう awk/sed 等の UNIX コマンドで加工してもよい</li>
-</ul>
-<h2 id="コンテナ任意">コンテナ（任意） </h2>
-<h3 id="setunordered_set">set/unordered_set </h3>
-<h3 id="queuestack">queue/stack </h3>
-<h3 id="pairtuple">pair/tuple </h3>
-<h2 id="課題-2-3">課題 2-3： </h2>
-<h2 id="数値計算">数値計算 </h2>
-<h3 id="cmath">cmath </h3>
-<p><code>cmath</code> ライブラリには数値計算に用いる様々な関数が実装されています．代表的なものを以下に示します (<code>std::</code> は省略)．詳細は <a href="https://cpprefjp.github.io/reference/cmath.html">https://cpprefjp.github.io/reference/cmath.html</a> を確認してください．</p>
-<ul>
-<li>三角関数: <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>asin</code>, <code>acos</code>, <code>atan</code></li>
-<li>双曲線関数: <code>sinh</code>, <code>cosh</code>, <code>tanh</code></li>
-<li>指数/対数関数: <code>exp</code>, <code>log</code>, <code>log10</code></li>
-<li>べき乗・絶対値: <code>pow</code>, <code>sqrt</code>, <code>abs</code></li>
-<li>整数丸め: <code>floor</code>, <code>ceil</code>, <code>round</code></li>
-</ul>
-<p>課題 1-2 の複利計算の関数 <code>fukuri</code> は，cmath ライブラリを使って次のように書くことができます．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath&gt;</span></span>
+</code></pre>
+        <p>Python の 辞書型 <code>dict</code> では，存在しないキーに対して <code>d[x] += 1</code> とすることはできません（<code>KeyError</code>
+            が出る）．一方，C++ や AWK の連想配列では，値の初期値が自動的に value 型の初期値となります．例えば，value 型が int であれば，宣言後にすべてのキーに対して 0
+            で初期化せずとも，キーが最初に使われるタイミングで 0 に初期化されます．</p>
+        <p>ヒストグラム法も同じように実装できます．ただし，整数丸めの関数は後述する <code>cmath</code> ライブラリに含まれています．</p>
+        <h2 id="課題-2-2統計量の計算">課題 2-2：統計量の計算 </h2>
+        <p>金沢の2017年から2019年の気温データ kanazawa2017-2019.csv を用いて，以下を求めてください．</p>
+        <ol>
+            <li>年ごとの，気温の最小値/最大値/平均値/標準偏差</li>
+            <li>月ごとの，気温の最小値/最大値/平均値/標準偏差</li>
+            <li>日ごとの，気温の最小値/最大値/平均値/標準偏差</li>
+        </ol>
+        <p>コメント</p>
+        <ul>
+            <li>2019/12/25 10:00 のデータが欠損していますが，無視してよい</li>
+            <li>ファイルは C++ で扱いやすいよう awk/sed 等の UNIX コマンドで加工してもよい</li>
+        </ul>
+        <h2 id="コンテナ任意">コンテナ（任意） </h2>
+        <h3 id="setunordered_set">set/unordered_set </h3>
+        <h3 id="queuestack">queue/stack </h3>
+        <h3 id="pairtuple">pair/tuple </h3>
+        <h2 id="課題-2-3">課題 2-3： </h2>
+        <h2 id="数値計算">数値計算 </h2>
+        <h3 id="cmath">cmath </h3>
+        <p><code>cmath</code> ライブラリには数値計算に用いる様々な関数が実装されています．代表的なものを以下に示します (<code>std::</code> は省略)．詳細は <a
+                href="https://cpprefjp.github.io/reference/cmath.html">https://cpprefjp.github.io/reference/cmath.html</a>
+            を確認してください．</p>
+        <ul>
+            <li>三角関数: <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>asin</code>, <code>acos</code>,
+                <code>atan</code>
+            </li>
+            <li>双曲線関数: <code>sinh</code>, <code>cosh</code>, <code>tanh</code></li>
+            <li>指数/対数関数: <code>exp</code>, <code>log</code>, <code>log10</code></li>
+            <li>べき乗・絶対値: <code>pow</code>, <code>sqrt</code>, <code>abs</code></li>
+            <li>整数丸め: <code>floor</code>, <code>ceil</code>, <code>round</code></li>
+        </ul>
+        <p>課題 1-2 の複利計算の関数 <code>fukuri</code> は，cmath ライブラリを使って次のように書くことができます．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath&gt;</span></span>
 
 <span class="token comment">// calculate x*(1+r/100)^t</span>
 <span class="token keyword keyword-double">double</span> <span class="token function">fukuri</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> x<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> r<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> t<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token keyword keyword-return">return</span> x <span class="token operator">*</span> std<span class="token double-colon punctuation">::</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token operator">+</span>r<span class="token operator">/</span><span class="token number">100.0</span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h3 id="random">random </h3>
-<p>確率的シミュレーションには疑似乱数の生成が欠かせません．</p>
-<h4 id="疑似乱数">疑似乱数 </h4>
-<p>疑似乱数とは，コンピュータによって生成される数列で，ある程度ランダムに見えるが，実際には計算式やアルゴリズムに基づいて生成されるため，真のランダム性は持たない数列のことです．疑似乱数は，乱数生成アルゴリズムによって決定されるため，同じ初期条件（シード値）を与えれば同じ数列を再現することができます．この特性は，科学研究やゲーム開発などで結果の再現性を確保するために利用されます．</p>
-<h4 id="乱数生成器">乱数生成器 </h4>
-<p>乱数生成器は，ランダムな数値（疑似乱数や真の乱数）を生成するための機械またはアルゴリズムのことです．乱数生成器には，疑似乱数生成器（PRNG: Pseudorandom Number Generator）と真の乱数生成器（TRNG: True Random Number Generator）の二つの主要なタイプがあります．</p>
-<ul>
-<li>疑似乱数生成器 (PRNG): 数学的なアルゴリズムを使用して疑似乱数を生成します．メルセンヌ・ツイスタや線形合同法などがあります．PRNGは高速で再現性がありますが，セキュリティが重要な用途では弱点になることがあります．</li>
-<li>真の乱数生成器 (TRNG): 物理的なランダムプロセス（電子の熱ノイズ，放射性崩壊など）を利用して真の乱数を生成します．TRNGはセキュリティが重要な用途（暗号化など）で好まれますが，PRNGに比べて生成速度が遅い場合があります．</li>
-</ul>
-<p>数値シミュレーションでは疑似乱数生成器を使います．</p>
-<h4 id="メルセンヌツイスタ-mersenne-twister">メルセンヌ・ツイスタ (Mersenne Twister) </h4>
-<p><strong>メルセンヌ・ツイスタ</strong> は，1997年に松本眞と西村拓士によって開発された乱数生成アルゴリズムで，現代のメジャー乱数生成器の一つです．その人気の理由は，長い周期性，高次元の均等分布，そして高速な生成速度にあります．</p>
-<ul>
-<li><strong>周期性</strong>: メルセンヌ・ツイスタは非常に長い周期を持ちます．最も一般的に使用されるバージョンであるMT19937は，2^19937-1 という極めて長い周期を持っています</li>
-<li><strong>高次元の均等分布</strong>: MT19937は623次元までの均等分布を実現します．これにより，多次元の乱数を必要とするシミュレーションなどで高い性能を発揮します</li>
-<li><strong>高速性</strong>: メルセンヌ・ツイスタは計算が高速であり，多くのアプリケーションで十分な速度で乱数を生成できます</li>
-<li><strong>移植性</strong>: 異なるプラットフォームやコンパイラでも同じ乱数列を生成することができます</li>
-</ul>
-<p>MT19937 は C++11から標準ライブラリにも採用されており，<code>&lt;random&gt;</code> ライブラリから <code>std::mt19937</code> として利用できます．</p>
-<h4 id="確率分布">確率分布 </h4>
-<p>乱数生成器 <code>std::mt19937</code> を確率分布に与えることで，その分布に従う乱数を生成します．代表的な分布は次のとおりです．その他の分布は <a href="https://cpprefjp.github.io/reference/random.html">https://cpprefjp.github.io/reference/random.html</a> を確認してください．</p>
-<ul>
-<li>一様分布: <code>std::uniform_real_distribution&lt;double&gt;</code></li>
-<li>正規分布: <code>std::normal_distribution&lt;double&gt;</code></li>
-<li>離散分布（標本分布）: <code>std::discrete_distribution&lt;int&gt;</code></li>
-</ul>
-<p><code>&lt;&gt;</code> 内の <code>double</code> や <code>int</code> は確率変数の型を表します．</p>
-<p>一様分布は定義域の下限 <code>a</code> と上限 <code>b</code> を指定します．定義域は <code>[a,b)</code> です．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code>std<span class="token double-colon punctuation">::</span>uniform_real_distribution<span class="token operator">&lt;</span><span class="token keyword keyword-double">double</span><span class="token operator">&gt;</span> <span class="token function">uni_dist</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><p>正規分布は平均と標準偏差をパラメータに指定します．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code>std<span class="token double-colon punctuation">::</span>normal_distribution<span class="token operator">&lt;</span><span class="token keyword keyword-double">double</span><span class="token operator">&gt;</span> <span class="token function">norm_dist</span><span class="token punctuation">(</span>mu<span class="token punctuation">,</span> sigma<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><p>離散分布（標本分布）は，<code>std::vector</code> 等の数列で確率分布を指定します．指定した数列の比率に従ってそのインデックスが生成されます．規格化は不要です．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token comment">// 2通りの初期化のどちらを使っても同じ</span>
+</code></pre>
+        <h3 id="random">random </h3>
+        <p>確率的シミュレーションには疑似乱数の生成が欠かせません．</p>
+        <h4 id="疑似乱数">疑似乱数 </h4>
+        <p>疑似乱数とは，コンピュータによって生成される数列で，ある程度ランダムに見えるが，実際には計算式やアルゴリズムに基づいて生成されるため，真のランダム性は持たない数列のことです．疑似乱数は，乱数生成アルゴリズムによって決定されるため，同じ初期条件（シード値）を与えれば同じ数列を再現することができます．この特性は，科学研究やゲーム開発などで結果の再現性を確保するために利用されます．
+        </p>
+        <h4 id="乱数生成器">乱数生成器 </h4>
+        <p>乱数生成器は，ランダムな数値（疑似乱数や真の乱数）を生成するための機械またはアルゴリズムのことです．乱数生成器には，疑似乱数生成器（PRNG: Pseudorandom Number
+            Generator）と真の乱数生成器（TRNG: True Random Number Generator）の二つの主要なタイプがあります．</p>
+        <ul>
+            <li>疑似乱数生成器 (PRNG):
+                数学的なアルゴリズムを使用して疑似乱数を生成します．メルセンヌ・ツイスタや線形合同法などがあります．PRNGは高速で再現性がありますが，セキュリティが重要な用途では弱点になることがあります．</li>
+            <li>真の乱数生成器 (TRNG):
+                物理的なランダムプロセス（電子の熱ノイズ，放射性崩壊など）を利用して真の乱数を生成します．TRNGはセキュリティが重要な用途（暗号化など）で好まれますが，PRNGに比べて生成速度が遅い場合があります．
+            </li>
+        </ul>
+        <p>数値シミュレーションでは疑似乱数生成器を使います．</p>
+        <h4 id="メルセンヌツイスタ-mersenne-twister">メルセンヌ・ツイスタ (Mersenne Twister) </h4>
+        <p><strong>メルセンヌ・ツイスタ</strong>
+            は，1997年に松本眞と西村拓士によって開発された乱数生成アルゴリズムで，現代のメジャー乱数生成器の一つです．その人気の理由は，長い周期性，高次元の均等分布，そして高速な生成速度にあります．</p>
+        <ul>
+            <li><strong>周期性</strong>: メルセンヌ・ツイスタは非常に長い周期を持ちます．最も一般的に使用されるバージョンであるMT19937は，2^19937-1 という極めて長い周期を持っています
+            </li>
+            <li><strong>高次元の均等分布</strong>: MT19937は623次元までの均等分布を実現します．これにより，多次元の乱数を必要とするシミュレーションなどで高い性能を発揮します</li>
+            <li><strong>高速性</strong>: メルセンヌ・ツイスタは計算が高速であり，多くのアプリケーションで十分な速度で乱数を生成できます</li>
+            <li><strong>移植性</strong>: 異なるプラットフォームやコンパイラでも同じ乱数列を生成することができます</li>
+        </ul>
+        <p>MT19937 は C++11から標準ライブラリにも採用されており，<code>&lt;random&gt;</code> ライブラリから <code>std::mt19937</code> として利用できます．
+        </p>
+        <h4 id="確率分布">確率分布 </h4>
+        <p>乱数生成器 <code>std::mt19937</code> を確率分布に与えることで，その分布に従う乱数を生成します．代表的な分布は次のとおりです．その他の分布は <a
+                href="https://cpprefjp.github.io/reference/random.html">https://cpprefjp.github.io/reference/random.html</a>
+            を確認してください．</p>
+        <ul>
+            <li>一様分布: <code>std::uniform_real_distribution&lt;double&gt;</code></li>
+            <li>正規分布: <code>std::normal_distribution&lt;double&gt;</code></li>
+            <li>離散分布（標本分布）: <code>std::discrete_distribution&lt;int&gt;</code></li>
+        </ul>
+        <p><code>&lt;&gt;</code> 内の <code>double</code> や <code>int</code> は確率変数の型を表します．</p>
+        <p>一様分布は定義域の下限 <code>a</code> と上限 <code>b</code> を指定します．定義域は <code>[a,b)</code> です．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code>std<span class="token double-colon punctuation">::</span>uniform_real_distribution<span class="token operator">&lt;</span><span class="token keyword keyword-double">double</span><span class="token operator">&gt;</span> <span class="token function">uni_dist</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+        <p>正規分布は平均と標準偏差をパラメータに指定します．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code>std<span class="token double-colon punctuation">::</span>normal_distribution<span class="token operator">&lt;</span><span class="token keyword keyword-double">double</span><span class="token operator">&gt;</span> <span class="token function">norm_dist</span><span class="token punctuation">(</span>mu<span class="token punctuation">,</span> sigma<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+        <p>離散分布（標本分布）は，<code>std::vector</code> 等の数列で確率分布を指定します．指定した数列の比率に従ってそのインデックスが生成されます．規格化は不要です．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token comment">// 2通りの初期化のどちらを使っても同じ</span>
 <span class="token comment">// 10:20:40 の比率でインデックス 0,1,2 を生成</span>
 std<span class="token double-colon punctuation">::</span>discrete_distribution<span class="token operator">&lt;</span><span class="token keyword keyword-int">int</span><span class="token operator">&gt;</span> <span class="token function">disc_dist</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 std<span class="token double-colon punctuation">::</span>discrete_distribution<span class="token operator">&lt;</span><span class="token keyword keyword-int">int</span><span class="token operator">&gt;</span> disc_dist <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">40</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre><h4 id="乱数生成">乱数生成 </h4>
-<p>メルセンヌ・ツイスタで乱数を生成する手順は次のとおりです．</p>
-<ol>
-<li><code>&lt;random&gt;</code> ヘッダーをインクルード</li>
-<li>シード値を固定</li>
-<li>乱数生成器を用意</li>
-<li>確率分布を用意</li>
-<li>乱数生成器を確率分布に渡し，乱数生成</li>
-</ol>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+</code></pre>
+        <h4 id="乱数生成">乱数生成 </h4>
+        <p>メルセンヌ・ツイスタで乱数を生成する手順は次のとおりです．</p>
+        <ol>
+            <li><code>&lt;random&gt;</code> ヘッダーをインクルード</li>
+            <li>シード値を固定</li>
+            <li>乱数生成器を用意</li>
+            <li>確率分布を用意</li>
+            <li>乱数生成器を確率分布に渡し，乱数生成</li>
+        </ol>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;random&gt;</span></span>
 
 <span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -427,9 +1341,13 @@ std<span class="token double-colon punctuation">::</span>discrete_distribution<s
 
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><p>乱数生成器の変数名には <code>gen</code> や <code>engine</code> などが使われます．<code>gen</code> は生成器 (generator) の頭文字，<code>engine</code> は乱数生成器が乱数生成エンジンと呼ばれることに由来しています．後者は，車体（確率分布）にエンジン（生成器）をかけると車が動く（乱数が生成される）といったイメージです．</p>
-<p>乱数生成器はプログラムの中で1つだけ定義します．関数内で乱数を使いたい場合は，乱数生成器をグローバルに宣言するか，<code>main</code> 関数内で定義してから関数の引数に参照渡しします．後者の書き方は以下のとおりです．</p>
-<pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+</code></pre>
+        <p>乱数生成器の変数名には <code>gen</code> や <code>engine</code> などが使われます．<code>gen</code> は生成器 (generator)
+            の頭文字，<code>engine</code> は乱数生成器が乱数生成エンジンと呼ばれることに由来しています．後者は，車体（確率分布）にエンジン（生成器）をかけると車が動く（乱数が生成される）といったイメージです．
+        </p>
+        <p>乱数生成器はプログラムの中で1つだけ定義します．関数内で乱数を使いたい場合は，乱数生成器をグローバルに宣言するか，<code>main</code>
+            関数内で定義してから関数の引数に参照渡しします．後者の書き方は以下のとおりです．</p>
+        <pre data-role="codeBlock" data-info="c++" class="language-cpp c++"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;random&gt;</span></span>
 
 <span class="token comment">// N個の標準正規乱数を生成</span>
@@ -452,26 +1370,157 @@ std<span class="token double-colon punctuation">::</span>discrete_distribution<s
 
     <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><h2 id="課題-2-4大数の法則">課題 2-4：大数の法則 </h2>
-<p>以下の確率分布について，シミュレーションにより大数の法則を確認してください．すなわち，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 個の乱数の標本平均が，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> を大きくするにつれ分布の母平均に収束していくことを確認してください．</p>
-<ol>
-<li>一様分布</li>
-<li>正規分布</li>
-<li>指数分布</li>
-</ol>
-<h2 id="課題-2-5べき乱数">課題 2-5：べき乱数 </h2>
-<p>逆関数法を用いて，べき分布に従う乱数を生成してください．</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">r</mi></mrow><mo stretchy="false">(</mo><mi>X</mi><mo>≥</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mrow><mo fence="true">(</mo><mfrac><mi>x</mi><msub><mi>x</mi><mn>0</mn></msub></mfrac><mo fence="true">)</mo></mrow><mrow><mo>−</mo><mi>α</mi></mrow></msup><mspace width="1em"></mspace><mo stretchy="false">(</mo><mi>x</mi><mo>≥</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{Pr}(X \geq x) = \left(\frac{x}{x_0}\right)^{-\alpha} \quad (x\geq x_0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">Pr</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.5613em;vertical-align:-0.95em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.6112em;"><span style="top:-3.9029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
-<p>また，生成した乱数列に対し，Python 等で累積分布関数 CDF を描いてください．</p>
+</code></pre>
+        <h2 id="課題-2-4大数の法則">課題 2-4：大数の法則 </h2>
+        <p>以下の確率分布について，シミュレーションにより大数の法則を確認してください．すなわち，<span class="katex"><span class="katex-mathml"><math
+                        xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                            <mrow>
+                                <mi>n</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">n</annotation>
+                        </semantics>
+                    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut"
+                            style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>
+            個の乱数の標本平均が，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <semantics>
+                            <mrow>
+                                <mi>n</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">n</annotation>
+                        </semantics>
+                    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut"
+                            style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>
+            を大きくするにつれ分布の母平均に収束していくことを確認してください．</p>
+        <ol>
+            <li>一様分布</li>
+            <li>正規分布</li>
+            <li>指数分布</li>
+        </ol>
+        <h2 id="課題-2-5べき乱数">課題 2-5：べき乱数 </h2>
+        <p>逆関数法を用いて，べき分布に従う乱数を生成してください．</p>
+        <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math
+                            xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                            <semantics>
+                                <mrow>
+                                    <mrow>
+                                        <mi mathvariant="normal">P</mi>
+                                        <mi mathvariant="normal">r</mi>
+                                    </mrow>
+                                    <mo stretchy="false">(</mo>
+                                    <mi>X</mi>
+                                    <mo>≥</mo>
+                                    <mi>x</mi>
+                                    <mo stretchy="false">)</mo>
+                                    <mo>=</mo>
+                                    <msup>
+                                        <mrow>
+                                            <mo fence="true">(</mo>
+                                            <mfrac>
+                                                <mi>x</mi>
+                                                <msub>
+                                                    <mi>x</mi>
+                                                    <mn>0</mn>
+                                                </msub>
+                                            </mfrac>
+                                            <mo fence="true">)</mo>
+                                        </mrow>
+                                        <mrow>
+                                            <mo>−</mo>
+                                            <mi>α</mi>
+                                        </mrow>
+                                    </msup>
+                                    <mspace width="1em"></mspace>
+                                    <mo stretchy="false">(</mo>
+                                    <mi>x</mi>
+                                    <mo>≥</mo>
+                                    <msub>
+                                        <mi>x</mi>
+                                        <mn>0</mn>
+                                    </msub>
+                                    <mo stretchy="false">)</mo>
+                                </mrow>
+                                <annotation encoding="application/x-tex">\mathrm{Pr}(X \geq x) =
+                                    \left(\frac{x}{x_0}\right)^{-\alpha} \quad (x\geq x_0)</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut"
+                                style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span
+                                    class="mord mathrm">Pr</span></span><span class="mopen">(</span><span
+                                class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace"
+                                style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace"
+                                style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut"
+                                style="height:1em;vertical-align:-0.25em;"></span><span
+                                class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace"
+                                style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace"
+                                style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut"
+                                style="height:2.5613em;vertical-align:-0.95em;"></span><span class="minner"><span
+                                    class="minner"><span class="mopen delimcenter" style="top:0em;"><span
+                                            class="delimsizing size3">(</span></span><span class="mord"><span
+                                            class="mopen nulldelimiter"></span><span class="mfrac"><span
+                                                class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                                        style="height:1.1076em;"><span style="top:-2.314em;"><span
+                                                                class="pstrut" style="height:3em;"></span><span
+                                                                class="mord"><span class="mord"><span
+                                                                        class="mord mathnormal">x</span><span
+                                                                        class="msupsub"><span
+                                                                            class="vlist-t vlist-t2"><span
+                                                                                class="vlist-r"><span class="vlist"
+                                                                                    style="height:0.3011em;"><span
+                                                                                        style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span
+                                                                                            class="pstrut"
+                                                                                            style="height:2.7em;"></span><span
+                                                                                            class="sizing reset-size6 size3 mtight"><span
+                                                                                                class="mord mtight">0</span></span></span></span><span
+                                                                                    class="vlist-s">​</span></span><span
+                                                                                class="vlist-r"><span class="vlist"
+                                                                                    style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span
+                                                            style="top:-3.23em;"><span class="pstrut"
+                                                                style="height:3em;"></span><span class="frac-line"
+                                                                style="border-bottom-width:0.04em;"></span></span><span
+                                                            style="top:-3.677em;"><span class="pstrut"
+                                                                style="height:3em;"></span><span class="mord"><span
+                                                                    class="mord mathnormal">x</span></span></span></span><span
+                                                        class="vlist-s">​</span></span><span class="vlist-r"><span
+                                                        class="vlist"
+                                                        style="height:0.836em;"><span></span></span></span></span></span><span
+                                            class="mclose nulldelimiter"></span></span><span class="mclose delimcenter"
+                                        style="top:0em;"><span class="delimsizing size3">)</span></span></span><span
+                                    class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"
+                                                style="height:1.6112em;"><span
+                                                    style="top:-3.9029em;margin-right:0.05em;"><span class="pstrut"
+                                                        style="height:2.7em;"></span><span
+                                                        class="sizing reset-size6 size3 mtight"><span
+                                                            class="mord mtight"><span class="mord mtight">−</span><span
+                                                                class="mord mathnormal mtight"
+                                                                style="margin-right:0.0037em;">α</span></span></span></span></span></span></span></span></span><span
+                                class="mspace" style="margin-right:1em;"></span><span class="mspace"
+                                style="margin-right:0.1667em;"></span><span class="mopen">(</span><span
+                                class="mord mathnormal">x</span><span class="mspace"
+                                style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace"
+                                style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut"
+                                style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span
+                                    class="mord mathnormal">x</span><span class="msupsub"><span
+                                        class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"
+                                                style="height:0.3011em;"><span
+                                                    style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span
+                                                        class="pstrut" style="height:2.7em;"></span><span
+                                                        class="sizing reset-size6 size3 mtight"><span
+                                                            class="mord mtight">0</span></span></span></span><span
+                                                class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"
+                                                style="height:0.15em;"><span></span></span></span></span></span></span><span
+                                class="mclose">)</span></span></span></span></span></p>
+        <p>また，生成した乱数列に対し，Python 等で累積分布関数 CDF を描いてください．</p>
 
-      </div>
-      
-      
-    
-    
-    
-    
-    
-    
-  
-    </body></html>
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
